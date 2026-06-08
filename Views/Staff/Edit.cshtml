@@ -1,0 +1,35 @@
+﻿@model LoginModule.Models.UserModel
+
+<h1>Edit Staff</h1>
+
+<form asp-action="Edit" method="post">
+
+    <input asp-for="Id" hidden />
+    <input asp-for="Role" hidden />
+
+    <div>
+        <label>Full Name</label>
+        <input asp-for="Fullname" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Email</label>
+        <input asp-for="Email" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" />
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Update
+    </button>
+
+</form>

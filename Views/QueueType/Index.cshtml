@@ -1,0 +1,44 @@
+﻿@model List<LoginModule.Models.QueueTypeModel>
+
+<h1>Queue Services</h1>
+
+<a href="/QueueType/Create">
+    Create Service
+</a>
+
+<br />
+<br />
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>ID</th>
+        <th>Service</th>
+        <th>Description</th>
+        <th>Active</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var queue in Model)
+    {
+        <tr>
+            <td>@queue.Id</td>
+            <td>@queue.Name</td>
+            <td>@queue.Description</td>
+            <td>@queue.IsActive</td>
+
+            <td>
+                <a href="/QueueType/Edit/@queue.Id">
+                    Edit
+                </a>
+
+                |
+
+                <a href="/QueueType/Delete/@queue.Id">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

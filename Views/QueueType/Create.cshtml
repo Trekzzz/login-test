@@ -1,0 +1,32 @@
+﻿@model LoginModule.Models.QueueTypeModel
+
+<h1>Create Queue Service</h1>
+
+<form asp-action="Create" method="post">
+
+    <div>
+        <label>Service Name</label>
+        <input asp-for="Name" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Description</label>
+        <input asp-for="Description" />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Active</label>
+        <input asp-for="IsActive" type="checkbox" />
+    </div>
+
+    <br />
+
+    <button type="submit">
+        Create Service
+    </button>
+
+</form>

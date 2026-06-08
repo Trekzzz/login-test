@@ -1,0 +1,42 @@
+﻿@model List<LoginModule.Models.UserModel>
+
+<h1>Staff Accounts</h1>
+
+<a href="/Staff/Create">
+    Create Staff
+</a>
+
+<br />
+<br />
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var staff in Model)
+    {
+        <tr>
+            <td>@staff.Id</td>
+            <td>@staff.Fullname</td>
+            <td>@staff.Email</td>
+
+            <td>
+                <a href="/Staff/Edit/@staff.Id">
+                    Edit
+                </a>
+
+                |
+
+                <a href="/Staff/Delete/@staff.Id">
+                    Delete
+                </a>
+            </td>
+        </tr>
+    }
+
+</table>

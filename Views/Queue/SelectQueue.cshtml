@@ -1,0 +1,20 @@
+﻿@model List<LoginModule.Models.QueueTypeModel>
+
+<h1>Select Queue Service</h1>
+
+@foreach (var queue in Model)
+{
+    <div style="border:1px solid black;
+                    padding:20px;
+                    margin:20px;">
+
+        <h3>@queue.Name</h3>
+
+        <p>@queue.Description</p>
+
+        <a href="/Queue/CreateTicket/@queue.Id">
+            Get Queue Number
+        </a>
+
+    </div>
+}

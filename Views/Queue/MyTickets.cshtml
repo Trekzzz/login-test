@@ -1,0 +1,22 @@
+﻿@model List<LoginModule.Models.QueueTicketModel>
+
+<h1>My Queue Tickets</h1>
+
+<table border="1" cellpadding="10">
+
+    <tr>
+        <th>Queue Number</th>
+        <th>Status</th>
+        <th>Created</th>
+    </tr>
+
+    @foreach (var ticket in Model)
+    {
+        <tr>
+            <td>@ticket.QueueNumber</td>
+            <td>@ticket.Status</td>
+            <td>@ticket.CreatedAt</td>
+        </tr>
+    }
+
+</table>
